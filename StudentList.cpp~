@@ -1,12 +1,14 @@
 #include <iostream>
-#include <vector>;
-#include <cstring
-Struct student{
-  char[] firstname;
-  char[] lastname;
+#include <vector>
+#include <cstring>
+struct Student{
+  char[21] firstname;
+  char[21] lastname;
   int ID;
   float GPA;
 };
+void add(vector<Student*> &in);
+void print(
 int main(){
   char input[5]; 
   vector <Student*> v;
@@ -16,13 +18,13 @@ int main(){
       cin.get(input,5);
       cin.get();
       if(input == "ADD"){
-	add(vector <&Student> v);
+	add(v);
       }
       if(input == "PRINT"){
-	print(vector <&Student> v);
+	print(v);
       }
       if(input == "DELETE"){
-	delete(vector <&Student> v);
+	delete(v);
       }
       if(input == "QUIT"){
 	cout << "Thanks for using student list!";
@@ -31,29 +33,28 @@ int main(){
 }
 
 void add(vector<Student*> &in){
-  Student s = new Student();
+  Student* s = new Student();
   cout << "You're adding a new student!" << endl;
   cout << "Enter their name." << endl;
-  cin << s.firstname << endl;
+  cin >> s->firstname;
   cout << "Enter their lastname." < endl;
-  cin << s.lastname << endl;
+  cin >> s->lastname;
   cout << "Enter their student ID." << endl;
-  cin << s.ID << endl;
+  cin >> s->ID;
   cout << "Enter their GPA." << endl;
-  cin << s.GPA << endl;
+  cin >> s->GPA;
   in.push_back(s);
 }
 
 void print(vector<Student*> &in){
   vector<Student*>::iterator ptr;
   for(ptr = in.begin(); ptr < in.end(); ptr++){
-    cout << (*ptr)->first;
-      cout << endl;
+    cout << (*ptr)->firstname << ", ";
+    cout <(*ptr);
       }
 }
 
- vo
-   id delete(vector<Student*> &in){
+ void delete(vector<Student*> &in){
    vector<Student*>::iterator new_end;
    new_end = erase(in.begin(),in.end(),(*in)->first->GPA);
    
