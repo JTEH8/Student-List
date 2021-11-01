@@ -1,3 +1,6 @@
+//This is a program that allows you to create a list of students with their First and Last names, GPAs, and Student IDS. The program utilizes vectors and lots of pointers to function.
+//Created by Jeffrey Teh
+//Finished on October 30, 2021
 #include <iostream>
 //For setprecision()
 #include <iomanip>
